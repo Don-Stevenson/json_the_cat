@@ -10,10 +10,13 @@ const fetchBreedDescription = function(breedName, callback) {
       return;
     }
     const data = JSON.parse(body)
+    console.log(data)
     if (data.length === 0) {
       callback("Error, breed not found", null);
     } else {
+      console.log("im here")
       callback(null, data[0].description);
+
     }
   });
 };
